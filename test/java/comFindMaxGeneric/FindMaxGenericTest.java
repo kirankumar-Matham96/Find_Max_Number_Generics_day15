@@ -17,4 +17,11 @@ public class FindMaxGenericTest {
         int max = findMaxGeneric.findMaxNumberAtFirstPosition(3,5,1);
         Assert.assertEquals(5,max);
     }
+    
+    @Test
+    public void givenThreeIntegers_FindsMaxAtThirdPosition_retunsTheSame() {
+        FindMaxGeneric findMaxGeneric = new FindMaxGeneric();
+        int max = findMaxGeneric.findMaxNumberAtFirstPosition(3,1,5);
+        Assert.assertEquals(5,max);
+    }
 }
