@@ -39,4 +39,10 @@ public class FindMaxGenericTest {
         Double max = FindMaxGeneric.findMaxFloat(9.2,5.1,2.9);
         Assert.assertEquals((Double) 9.2,max);
     }
+    
+    @Test
+    public void givenThreeStrings_FindBiggestString_returnsTheSame() {
+        String str = FindMaxGeneric.findBiggestString("Banana","Apple","Peach");
+        Assert.assertEquals("Peach",str);
+    }
 }
