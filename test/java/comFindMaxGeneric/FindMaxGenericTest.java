@@ -30,13 +30,13 @@ public class FindMaxGenericTest {
     
     @Test
     public void givenThreeFloatValues_FindMaxAtSecondPosition_returnsTheSame() {
-        Double max = GenericFindMax.findMax(9.2, 5.1, 2.9);
+        Double max = GenericFindMax.findMax( 5.1, 9.2,2.9);
         Assert.assertEquals((Double) 9.2, max);
     }
     
     @Test
     public void givenThreeFloatValues_FindMaxAtThirdPosition_returnsTheSame() {
-        Double max = GenericFindMax.findMax(9.2, 5.1, 2.9);
+        Double max = GenericFindMax.findMax( 5.1, 2.9,9.2);
         Assert.assertEquals((Double) 9.2, max);
     }
     
