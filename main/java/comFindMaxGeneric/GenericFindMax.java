@@ -1,23 +1,21 @@
 package comFindMaxGeneric;
 
 public class GenericFindMax<E extends Comparable> {
-    E x, y, z;
+    E a,b,c,d;
     
-    public GenericFindMax(E x, E y, E z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
+    public static <E extends Comparable> E findMax(E a, E b, E c, E d) {
+
+        E max = a;
     
-    public static <E extends Comparable> E findMax(E x, E y, E z) {
-        if(x.compareTo(y) > 0) {
-            if(x.compareTo(z) > 0) {
-                return x;
-            }
+        if(b.compareTo(max) > 0) {
+            max = b;
         }
-        if(y.compareTo(z) > 0) {
-            return y;
+        if(c.compareTo(max) > 0) {
+            max = c;
         }
-        return z;
+        if(d.compareTo(max) > 0){
+            max = d;
+        }
+        return max;
     }
 }
