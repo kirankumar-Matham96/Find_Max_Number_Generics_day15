@@ -16,6 +16,11 @@ public class GenericFindMax<E extends Comparable> {
         if(d.compareTo(max) > 0){
             max = d;
         }
+        printMax(max);
         return max;
+    }
+    
+    private static <E extends Comparable> void printMax(E max) {
+        System.out.println(max);
     }
 }
