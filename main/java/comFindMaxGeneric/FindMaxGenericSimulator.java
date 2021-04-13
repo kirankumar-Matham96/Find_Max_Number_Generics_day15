@@ -26,7 +26,7 @@ public class FindMaxGenericSimulator {
         doubleList.add(5.5);
         doubleList.add(6.5);
         new GenericFindMax<>(doubleList);
-        
+    
         stringList.add("Apple");
         stringList.add("Pineapple");
         stringList.add("Pomegranate");
@@ -35,6 +35,6 @@ public class FindMaxGenericSimulator {
         stringList.add("Tamarind");
         stringList.add("Banana");
         stringList.add("Dates");
-        new GenericFindMax<>( stringList);
+        new GenericFindMax<>(stringList);
     }
 }

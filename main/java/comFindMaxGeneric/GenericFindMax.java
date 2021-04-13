@@ -14,6 +14,7 @@ public class GenericFindMax<E extends Comparable> {
     
     ArrayList<E> genericList;
     Map<String, Integer> stringMap = new HashMap<>();
+    ArrayList<E> genericResultList = new ArrayList<>();
     
     /**
      * Generic method to find max
@@ -28,9 +29,11 @@ public class GenericFindMax<E extends Comparable> {
             for(int i = 0; i < this.genericList.size(); i++) {
                 stringMap.put((String) this.genericList.get(i), this.genericList.get(i).toString().length());
             }
-            System.out.println("max string/strings: " + findMaxString());
+            System.out.println(findMaxString());
+            genericResultList = (ArrayList<E>) findMaxString();
         } else {
-            findMaxNonString();
+            System.out.println(findMaxNonString());
+//            genericResultList = findMaxNonString();
         }
     }
     
@@ -64,17 +67,17 @@ public class GenericFindMax<E extends Comparable> {
     /**
      * Finds max in the list and returns it (for non string elements only)
      *
-     * @param <E>
+     * @param <E> generic
+     * @return
      */
-    public <E extends Comparable> void findMaxNonString() {
+    public <E extends Comparable> E findMaxNonString() {
         
         E max = (E) this.genericList.get(0);
-        
         for(int i = 1; i < genericList.size(); i++) {
             if(this.genericList.get(i).compareTo(max) > 0) {
                 max = (E) this.genericList.get(i);
             }
         }
-        System.out.println(max);
+        return max;
     }
 }
