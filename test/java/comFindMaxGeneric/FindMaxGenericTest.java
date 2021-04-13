@@ -9,8 +9,8 @@ public class FindMaxGenericTest {
     
     //generic test method
     @Test
-    public <E extends Comparable> void givenThreeIntegers_FindsMaxAtFirstPosition_retunsTheSame() {
-        E max = (E) GenericFindMax.findMax(5, 3, 2, 1);
+    public void givenThreeIntegers_FindsMaxAtFirstPosition_retunsTheSame() {
+        int max = GenericFindMax.findMax(5, 3, 2, 1);
         Assert.assertEquals(5, max);
     }
     
